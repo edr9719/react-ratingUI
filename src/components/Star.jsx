@@ -9,7 +9,7 @@ function Star({
 }) {
   return (
     <span
-      onClick={() => ratingClick(star)}
+      onClick={() => (rating === star ? ratingClick(0) : ratingClick(star))} //personal implementation to "unclick" stars//
       onMouseEnter={() => hoverEnter(star)}
       onMouseLeave={() => hoverLeave(null)}
       className='star'
